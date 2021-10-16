@@ -29763,17 +29763,17 @@ var MainView = /*#__PURE__*/function (_React$Component) {
         _id: 1,
         Title: 'Inception',
         Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
-        ImagePath: '...'
+        ImagePath: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg'
       }, {
         _id: 2,
         Title: 'The Shawshank Redemption',
         Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
-        ImagePath: '...'
+        ImagePath: 'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg'
       }, {
         _id: 3,
         Title: 'Gladiator',
         Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.',
-        ImagePath: '...'
+        ImagePath: 'https://m.media-amazon.com/images/I/41BY7QG9MYL._AC_.jpg'
       }],
       selectedMovie: null
     };
@@ -29984,7 +29984,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60868" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
