@@ -29614,7 +29614,9 @@ var MovieCard = /*#__PURE__*/function (_React$Component) {
   _createClass(MovieCard, [{
     key: "render",
     value: function render() {
-      var movie = this.props.movie;
+      var _this$props = this.props,
+          movie = _this$props.movie,
+          onMovieClick = _this$props.onMovieClick;
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "movie-card",
         onClick: function onClick() {
