@@ -7,10 +7,18 @@ import './index.scss';
 
 // Main component (will eventually use all the others)
 class MyFlixApplication extends React.Component {
+
+  constructor() {
+    super();
+      //code executed right when the component is created in the memory
+  }
+
   render() {
-    return (
-      <MainView />
-    );
+    return <div>Hello World</div>;
+  }
+
+  componentDidMount() {
+    //code executed right after the component is added to the DOM
   }
 }
 
