@@ -32944,14 +32944,12 @@ var MainView = /*#__PURE__*/function (_React$Component) {
       this.setState({
         selectedMovie: newSelectedMovie
       });
-    }
-  }, {
-    key: "onRegistration",
-    value: function onRegistration(register) {
-      this.setState({
-        register: register
-      });
-    } // onLoggedIn(user) {
+    } // onRegistration(register) {
+    //   this.setState({
+    //     register,
+    //   });
+    // }
+    // onLoggedIn(user) {
     //   this.setState({
     //     user
     //   });
@@ -33093,7 +33091,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53242" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -39,11 +39,11 @@ export class MainView extends React.Component {
       });
     }
 
-    onRegistration(register) {
-      this.setState({
-        register,
-      });
-    }
+    // onRegistration(register) {
+    //   this.setState({
+    //     register,
+    //   });
+    // }
 
     // onLoggedIn(user) {
     //   this.setState({
