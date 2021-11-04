@@ -40,22 +40,41 @@ export function RegistrationView(props) {
                 <Form>
                   <Form.Group>
                     <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" value={Username} onChange={e => setUsername(e.target.value)} />
+                    <Form.Control 
+                    type="text" 
+                    value={Username} 
+                    onChange={e => setUsername(e.target.value)} 
+                    required
+                    placeholder="Enter a username" />
                   </Form.Group>
 
                   <Form.Group>
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" value={Password} onChange={e => setPassword(e.target.value)} />
+                    <Form.Control 
+                    type="password" 
+                    value={Password} 
+                    onChange={e => setPassword(e.target.value)} 
+                    required
+                    minLength="8" />
                   </Form.Group>
 
                   <Form.Group>
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" value={Email} onChange={e => setEmail(e.target.value)} />
+                    <Form.Control 
+                    type="email" 
+                    value={Email} 
+                    onChange={e => setEmail(e.target.value)} 
+                    required />
                   </Form.Group>
 
                   <Form.Group>
                     <Form.Label>Birthday</Form.Label>
-                    <Form.Control className="mb-3" type="date" value={Birthday} onChange={e => setBirthday(e.target.value)} />
+                    <Form.Control 
+                    className="mb-3" 
+                    type="date" 
+                    value={Birthday} 
+                    onChange={e => setBirthday(e.target.value)} 
+                    required />
                   </Form.Group>
                   
                   <Button className="registerButton" variant="secondary" size="lg" type="submit" onClick={handleSubmit}>Register</Button>
