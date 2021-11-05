@@ -6,8 +6,8 @@ import Row from 'react-bootstrap/Row';
 
 import './main-view.scss'
 
-// import {RegistrationView} from '../registration-view/registration-view';
-// import {LoginView} from '../login-view/login-view';
+import {RegistrationView} from '../registration-view/registration-view';
+import {LoginView} from '../login-view/login-view';
 import {MovieCard} from '../movie-card/movie-card';
 import {MovieView} from '../movie-view/movie-view';
 // import {Container} from 'react-bootstrap';
