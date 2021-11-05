@@ -3,9 +3,14 @@
 import React from 'react';
 import axios from 'axios';
 
-import {LoginView} from '../login-view/login-view';
+import './main-view.scss'
+
+// import {RegistrationView} from '../registration-view/registration-view';
+// import {LoginView} from '../login-view/login-view';
 import {MovieCard} from '../movie-card/movie-card';
 import {MovieView} from '../movie-view/movie-view';
+// import {Container} from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 
 export class MainView extends React.Component {
 
@@ -13,7 +18,8 @@ export class MainView extends React.Component {
       super();
       this.state = {
         movies: [],
-        selectedMovie: null
+        selectedMovie: null,
+        user: null
       };
     }
 
@@ -35,6 +41,12 @@ export class MainView extends React.Component {
       });
     }
 
+    onRegistration(register) {
+      this.setState({
+        register,
+      });
+    }
+
     onLoggedIn(user) {
       this.setState({
         user
@@ -42,7 +54,9 @@ export class MainView extends React.Component {
     }
   
     render() {
-      const { movies, selectedMovie } = this.state;
+      const { movies, selectedMovie, user, register } = this.state;
+
+      if (!register) return (<RegistrationView onRegistration={(register) => this.onRegistration(register)}/>);
   
       if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
@@ -50,12 +64,40 @@ export class MainView extends React.Component {
   
       return (
         <div className="main-view">
-          {selectedMovie
-            ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-            : movies.map(movie => (
-              <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
-            ))
-          }
+           <Navbar bg="navColor" variant="dark" expand="lg">
+             <Container fluid>
+               <Navbar.Brand href="#home">My-Flix App</Navbar.Brand>
+               <Nav className="me-auto">
+                 <Nav.Link href="#home">Movies</Nav.Link>
+                 <Nav.Link href="#user">Profile</Nav.Link>
+                 <Nav.Link href="#logout">Logout</Nav.Link>
+               </Nav>
+             </Container>
+           </Navbar>
+           <div>
+             <Container>
+               {selectedMovie
+                 ? (
+                   <Row className="justify-content-lg-center">
+                     <Col lg={9} >
+                       <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
+                     </Col>
+                   </Row>
+                 )
+                 : (
+                   <Row className="justify-content-lg-center">
+                     { movies.map(movie => (
+                       <Col lg={3} md={4} sm={6} >
+                         <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
+                       </Col>
+                       ))
+                     }
+                   </Row>
+                 )  
+               }
+             </Container>
+           </div>
+            
         </div>
       );
     }
