@@ -3,19 +3,19 @@
 import React from 'react';
 import axios from 'axios';
 
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 
 import './main-view.scss'
 
-import {RegistrationView} from '../registration-view/registration-view';
 import {LoginView} from '../login-view/login-view';
 import {MovieCard} from '../movie-card/movie-card';
 import {MovieView} from '../movie-view/movie-view';
-// import {Container} from 'react-bootstrap';
-// import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import {ProfileView} from '../profile-view/profile-view';
+import {DirectorView} from '../director-view/director-view';
+import {GenreView} from '../genre-view/genre-view';
+import {RegistrationView} from '../registration-view/registration-view';
 
 export class MainView extends React.Component {
 
@@ -77,7 +77,24 @@ export class MainView extends React.Component {
   
       return (
         <Router>
+
+            <Navbar fixed="top" className="mainnav py-3 py-lg-4" bg="navColor" variant="dark" expand="md">
+                <Navbar.Brand href="/"><span className="brand-name">MyFlix-App</span></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="ms-auto">
+                    <Nav.Link href="/">Movies</Nav.Link>
+                    <Nav.Link href="/users/:username">Profile</Nav.Link>
+                    <Nav.Link href="/" onClick={() => { this.onLoggedOut() }} >Logout</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+          <div>
+            <Container>
+              
           <Row className="main-view justify-content-md-center">
+          <Routes>
             <Route exact path="/" render={() => {
             if (!user) return <Col>
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
@@ -135,8 +152,12 @@ export class MainView extends React.Component {
                 <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
               </Col>
             }
-            } />
+            } /></Routes>
+            
           </Row>
+          
+          </Container>
+          </div>
         </Router>
       );
     }

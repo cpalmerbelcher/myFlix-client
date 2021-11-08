@@ -38,7 +38,6 @@ export class ProfileView extends React.Component {
   }
 
   // Current User profile data
-
   getUser(token) {
     const username = localStorage.getItem('user');
     axios.get(`https://my-flix-application.herokuapp.com/users/${username}`, {
