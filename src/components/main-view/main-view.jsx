@@ -72,22 +72,8 @@ export class MainView extends React.Component {
       });
     }
 
-    // setSelectedMovie(newSelectedMovie) {
-    //   this.setState({
-    //     selectedMovie: newSelectedMovie
-    //   });
-    // }
-
-    // onRegistration(register) {
-    //   this.setState({
-    //     register,
-    //   });
-    // }
-
     render() {
       const { movies, user } = this.state;
-
-      // if (!register) return (<RegistrationView onRegistration={(register) => this.onRegistration(register)}/>);
   
       return (
         <Router>

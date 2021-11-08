@@ -53597,17 +53597,7 @@ var MainView = /*#__PURE__*/function (_React$Component) {
       this.setState({
         user: null
       });
-    } // setSelectedMovie(newSelectedMovie) {
-    //   this.setState({
-    //     selectedMovie: newSelectedMovie
-    //   });
-    // }
-    // onRegistration(register) {
-    //   this.setState({
-    //     register,
-    //   });
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -53615,8 +53605,7 @@ var MainView = /*#__PURE__*/function (_React$Component) {
 
       var _this$state = this.state,
           movies = _this$state.movies,
-          user = _this$state.user; // if (!register) return (<RegistrationView onRegistration={(register) => this.onRegistration(register)}/>);
-
+          user = _this$state.user;
       return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Row.default, {
         className: "main-view justify-content-md-center"
       }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
