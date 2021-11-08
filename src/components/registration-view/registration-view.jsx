@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 
 import './registration-view.scss';
@@ -12,8 +13,21 @@ export function RegistrationView(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(Username, Password, Email, Birthday);
-        props.onRegistration(Username);
+        axios.post('https://my-flix-application.herokuapp.com/users', {
+          Username: username,
+          Password: password,
+          Email: email,
+          Birthday: Birthday
+        })
+        .then(response => {
+          const data = response.data;
+          console.log(data);
+          window.open('/', '_self');
+          // the second argument '_self is necessary so that the page will open in the current tab
+        })
+        .catch(e => {
+          console.log('error registering the user')
+        });
     };
 
     return (
