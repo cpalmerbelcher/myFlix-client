@@ -1,5 +1,3 @@
-// myFlix-client/src/main-view/main-view.jsx
-
 import React from 'react';
 import axios from 'axios';
 
@@ -97,7 +95,7 @@ export class MainView extends React.Component {
           <Routes>
             <Route exact path="/" render={() => {
             if (!user) return <Col>
-                <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+               element={<LoginView onLoggedIn={user => this.onLoggedIn(user)} />} 
               </Col>
             if (movies.length === 0) return <div className="main-view" />;
               return movies.map(m => (
