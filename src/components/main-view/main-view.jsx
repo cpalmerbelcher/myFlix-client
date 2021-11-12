@@ -76,6 +76,7 @@ export class MainView extends React.Component {
       return (
         <Router>
 
+            <div className="main-view justify-content-center">
             <Navbar fixed="top" className="mainnav py-3 py-lg-4" bg="navColor" variant="dark" expand="md">
                 <Navbar.Brand href="/"><span className="brand-name">MyFlix-App</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -92,10 +93,9 @@ export class MainView extends React.Component {
             <Container>
               
           <Row className="main-view justify-content-md-center">
-          <Routes>
             <Route exact path="/" render={() => {
             if (!user) return <Col>
-               element={<LoginView onLoggedIn={user => this.onLoggedIn(user)} />} 
+               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
               </Col>
             if (movies.length === 0) return <div className="main-view" />;
               return movies.map(m => (
@@ -150,11 +150,12 @@ export class MainView extends React.Component {
                 <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
               </Col>
             }
-            } /></Routes>
+            } />
             
           </Row>
           
           </Container>
+          </div>
           </div>
         </Router>
       );
