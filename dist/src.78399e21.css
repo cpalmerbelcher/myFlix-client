@@ -209,6 +209,7 @@
   background: #408E2F;
   width: 100%;
   height: 100vh;
+  margin-top: 40px;
 }
 
 .bg-navColor {
@@ -220,7 +221,7 @@
   max-width: 400px;
   margin: auto;
   margin-top: 50px;
-  background: #D8E428;
+  background: white;
   color: #1C2D19;
 }
 
