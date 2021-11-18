@@ -56834,7 +56834,7 @@ function VisibilityFilterInput(props) {
 }
 
 var _default = (0, _reactRedux.connect)(null, {
-  setFliter: setFliter
+  setFilter: _actions.setFilter
 })(VisibilityFilterInput);
 
 exports.default = _default;

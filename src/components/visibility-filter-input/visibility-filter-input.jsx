@@ -10,4 +10,4 @@ function VisibilityFilterInput(props) {
     value={props.visibilityFilter} placeholder="filter" />;
 }
 
-export default connect(null, { setFliter })(VisibilityFilterInput);
+export default connect(null, { setFilter })(VisibilityFilterInput);
