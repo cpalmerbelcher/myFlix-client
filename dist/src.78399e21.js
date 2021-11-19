@@ -58302,7 +58302,7 @@ var _reactRedux = require("react-redux");
 
 var _reducers = _interopRequireDefault(require("./reducers/reducers"));
 
-var _mainView = require("./components/main-view/main-view");
+var _mainView = _interopRequireDefault(require("./components/main-view/main-view"));
 
 var _reduxDevtoolsExtension = require("redux-devtools-extension");
 
@@ -58350,7 +58350,7 @@ var MyFlixApplication = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
         store: store
-      }, /*#__PURE__*/_react.default.createElement(_Container.default, null, /*#__PURE__*/_react.default.createElement(_mainView.MainView, null)));
+      }, /*#__PURE__*/_react.default.createElement(_Container.default, null, /*#__PURE__*/_react.default.createElement(_mainView.default, null)));
     }
   }]);
 
