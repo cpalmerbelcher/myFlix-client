@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import axios from 'axios';
 import { Navbar, Nav, Form, Button, Card, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import './login-view.scss';
 
@@ -64,6 +65,9 @@ export function LoginView(props) {
                   Login
                 </Button>
               </Form>
+              <Link to={`/register`}>
+                  <Button variant="link" className="button-register">Create new Account</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Container>

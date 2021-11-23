@@ -6,7 +6,6 @@
   font-family: "Lato", sans-serif;
   background: #408E2F;
   width: 100%;
-  display: inline-block;
 }
 
 .bg-navColor {
@@ -42,7 +41,7 @@
 .moviesContainer {
   background: #408E2F;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
 }
 
 .movie-view {
@@ -54,7 +53,7 @@
   text-align: center;
 }
 
-.title, .description, .genre, .director, .actors, .year {
+.title, .description, .genre, .director, .bio {
   color: #1C2D19;
   font-size: 20px;
   font-weight: 400;

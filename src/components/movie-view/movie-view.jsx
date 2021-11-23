@@ -29,7 +29,7 @@ export class MovieView extends React.Component {
               <Col>
                 <div className="movie-view">
                   <div className="movie-poster">
-                    <img src={movie.ImagePath} />
+                    <img src={movie.ImagePath} style={{ height: '500px', marginTop: '4em' }} />
                   </div>
                   <div className="movie-title">
                     <span className="label">Title: </span>

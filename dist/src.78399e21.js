@@ -56969,13 +56969,17 @@ function MoviesList(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Col.default, {
     md: 12,
     style: {
-      margin: '1em'
+      marginTop: '7em',
+      marginBottom: '2em'
     }
   }, /*#__PURE__*/_react.default.createElement(_visibilityFilterInput.default, {
     visibilityFilter: visibilityFilter
   })), filteredMovies.map(function (m) {
     return /*#__PURE__*/_react.default.createElement(_Col.default, {
-      md: 3,
+      md: 4,
+      style: {
+        marginBottom: '1em'
+      },
       key: m._id
     }, /*#__PURE__*/_react.default.createElement(_movieCard.MovieCard, {
       movie: m
@@ -57006,6 +57010,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _axios = _interopRequireDefault(require("axios"));
 
 var _reactBootstrap = require("react-bootstrap");
+
+var _reactRouterDom = require("react-router-dom");
 
 require("./login-view.scss");
 
@@ -57095,7 +57101,12 @@ function LoginView(props) {
     size: "lg",
     type: "submit",
     onClick: handleSubmit
-  }, "Login")))));
+  }, "Login")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/register"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
+    variant: "link",
+    className: "button-register"
+  }, "Create new Account")))));
 }
 
 LoginView.propTypes = {
@@ -57105,7 +57116,7 @@ LoginView.propTypes = {
   }),
   onLoggedIn: _propTypes.default.func.isRequired
 };
-},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","axios":"../node_modules/axios/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./login-view.scss":"components/login-view/login-view.scss"}],"components/movie-view/movie-view.scss":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","axios":"../node_modules/axios/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./login-view.scss":"components/login-view/login-view.scss"}],"components/movie-view/movie-view.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -57192,7 +57203,11 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "movie-poster"
       }, /*#__PURE__*/_react.default.createElement("img", {
-        src: movie.ImagePath
+        src: movie.ImagePath,
+        style: {
+          height: '500px',
+          marginTop: '4em'
+        }
       })), /*#__PURE__*/_react.default.createElement("div", {
         className: "movie-title"
       }, /*#__PURE__*/_react.default.createElement("span", {
@@ -58350,7 +58365,9 @@ var MyFlixApplication = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
         store: store
-      }, /*#__PURE__*/_react.default.createElement(_Container.default, null, /*#__PURE__*/_react.default.createElement(_mainView.default, null)));
+      }, /*#__PURE__*/_react.default.createElement(_Container.default, {
+        fluid: true
+      }, /*#__PURE__*/_react.default.createElement(_mainView.default, null)));
     }
   }]);
 
@@ -58389,7 +58406,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56502" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65260" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
