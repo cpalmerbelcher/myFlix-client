@@ -13,9 +13,9 @@
     text-align: center;
   }
 
-  .title, .description, .genre, .director, .bio  {
-    color: #1C2D19;
-    font-size: 20px;
+  .title, .description, .genre, .director, .bio, .movie-title, .movie-description {
+    color: #F4FBF3;
+    font-size: 18px;
     font-weight: 400;
   }
   
@@ -28,5 +28,6 @@
   .movie-button {
     margin-top: 20px;
     width: 100%;
-    background-color: #1C2D19;
+    background-color: #F4FBF3;
   }
+

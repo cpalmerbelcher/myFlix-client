@@ -53,9 +53,9 @@
   text-align: center;
 }
 
-.title, .description, .genre, .director, .bio {
-  color: #1C2D19;
-  font-size: 20px;
+.title, .description, .genre, .director, .bio, .movie-title, .movie-description {
+  color: #F4FBF3;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -68,7 +68,7 @@
 .movie-button {
   margin-top: 20px;
   width: 100%;
-  background-color: #1C2D19;
+  background-color: #F4FBF3;
 }
 .profile-view {
   margin-top: 30px;
@@ -151,13 +151,13 @@
 }
 
 .director-view {
-  margin-top: 50px;
+  margin-top: 150px;
   color: white;
 }
 
 .name, .bio, .birthyear {
   color: #1C2D19;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -179,13 +179,13 @@
 }
 
 .genre-view {
-  margin-top: 50px;
+  margin-top: 150px;
   color: white;
 }
 
 .name, .description {
   color: #1C2D19;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -198,7 +198,7 @@
 .genre-button {
   margin-top: 20px;
   width: 100%;
-  background-color: #1C2D19;
+  background-color: #F4FBF3;
 }
 * {
   box-sizing: border-box;

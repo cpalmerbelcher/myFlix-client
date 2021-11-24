@@ -57662,6 +57662,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -57696,6 +57698,8 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
   _createClass(DirectorView, [{
     key: "render",
     value: function render() {
+      var _React$createElement;
+
       var _this$props = this.props,
           director = _this$props.director,
           onBackClick = _this$props.onBackClick;
@@ -57716,20 +57720,13 @@ var DirectorView = /*#__PURE__*/function (_React$Component) {
       }, "Bio: "), /*#__PURE__*/_react.default.createElement("span", {
         className: "value"
       }, director.Bio)), /*#__PURE__*/_react.default.createElement("div", {
-        className: "director-birth"
-      }, /*#__PURE__*/_react.default.createElement("span", {
-        className: "birthyear"
-      }, "BirthYear: "), /*#__PURE__*/_react.default.createElement("span", {
-        className: "value"
-      }, director.Bio)), /*#__PURE__*/_react.default.createElement("div", {
         className: "director-button-div"
-      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
-        className: "director-button mt-3",
-        variant: "secondary",
-        onClick: function onClick() {
-          onBackClick(null);
-        }
-      }, "Back"))))));
+      }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, (_React$createElement = {
+        className: "director-button",
+        variant: "primary"
+      }, _defineProperty(_React$createElement, "className", "mt-3"), _defineProperty(_React$createElement, "onClick", function onClick() {
+        onBackClick(null);
+      }), _React$createElement), "Back"))))));
     }
   }]);
 
@@ -57832,7 +57829,7 @@ var GenreView = /*#__PURE__*/function (_React$Component) {
         className: "genre-button-div"
       }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, (_React$createElement = {
         className: "genre-button",
-        variant: "secondary"
+        variant: "primary"
       }, _defineProperty(_React$createElement, "className", "mt-3"), _defineProperty(_React$createElement, "onClick", function onClick() {
         onBackClick(null);
       }), _React$createElement), "Back"))))));
