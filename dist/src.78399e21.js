@@ -57250,8 +57250,8 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
         to: "/directors/".concat(movie.Director.Name)
       }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
         style: {
-          backgroundColor: 'blue',
-          color: 'white'
+          backgroundColor: 'white',
+          color: 'black'
         },
         variant: "link"
       }, "Director"))), /*#__PURE__*/_react.default.createElement("div", {
@@ -57260,8 +57260,8 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
         to: "/genres/".concat(movie.Genre.Name)
       }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
         style: {
-          backgroundColor: 'blue',
-          color: 'white'
+          backgroundColor: 'white',
+          color: 'black'
         },
         variant: "link"
       }, "Genre"))), /*#__PURE__*/_react.default.createElement("button", {
@@ -58411,7 +58411,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60124" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61963" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
