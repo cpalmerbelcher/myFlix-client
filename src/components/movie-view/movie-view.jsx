@@ -44,7 +44,7 @@ export class MovieView extends React.Component {
                     <span className="value">{movie.Genre.Name}</span>
                   </div>
                   <div className="genre-description">
-                    <span className="genre">Description: </span>
+                    <span className="genre">Genre Description: </span>
                     <span className="value">{movie.Genre.Description}</span>
                   </div>
                   <div className="movie-director">

@@ -57230,7 +57230,7 @@ var MovieView = /*#__PURE__*/function (_React$Component) {
         className: "genre-description"
       }, /*#__PURE__*/_react.default.createElement("span", {
         className: "genre"
-      }, "Description: "), /*#__PURE__*/_react.default.createElement("span", {
+      }, "Genre Description: "), /*#__PURE__*/_react.default.createElement("span", {
         className: "value"
       }, movie.Genre.Description)), /*#__PURE__*/_react.default.createElement("div", {
         className: "movie-director"
@@ -58411,7 +58411,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61963" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58063" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
