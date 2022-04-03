@@ -1,0 +1,29 @@
+.genreContainer {
+  background: #408E2F;
+  width: 100%;
+  height: 100vh;
+}
+
+.genre-view {
+  margin-top: 150px;
+  color: white;
+}
+
+.name, .description {
+  color: #1C2D19;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.genre-button-div {
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.genre-button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #F4FBF3;
+}
+/*# sourceMappingURL=genre-view.css.map */

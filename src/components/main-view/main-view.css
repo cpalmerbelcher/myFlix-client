@@ -1,0 +1,15 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-view {
+  font-family: 'Lato', sans-serif;
+  background: #408E2F;
+  width: 100%;
+}
+
+.bg-navColor {
+  background: #1C2D19;
+}
+/*# sourceMappingURL=main-view.css.map */
